@@ -4,7 +4,7 @@
 
 function sendToGoogleSheet(data) {
   fetch(
-    "https://script.google.com/macros/s/AKfycbxlMT-VrwD57LDXBdBJZOI29Yhakds6_PFYoUETaWIWZnRYXsKGcWGbiVJTw8atIayf/exec",
+    "https://script.google.com/macros/s/AKfycbwhXYnsoiBkpxvtMpkYELqPHuOoZafmUmJfI0fbnZw39dFi0CtxBLN_rBOVqKmPrako/exec",
     {
       method: "POST",
       headers: {
