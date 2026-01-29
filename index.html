@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>XAUUSD トレード記録</title>
+  <style>
+    label { display: block; margin-top: 8px; }
+    textarea { width: 100%; }
+    .reason-row { margin-bottom: 10px; }
+    #output { white-space: pre-wrap; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h1>XAUUSD トレード記録フォーム</h1>
+
+<!-- 基本情報 -->
+<label>通貨ペア
+  <select id="symbol">
+    <option value="xauusd">XAUUSD</option>
+  </select>
+</label>
+
+<label>売買種別
+  <select id="entryType">
+    <option>買い</option>
+    <option>売り</option>
+  </select>
+</label>
+
+<label>時間足
+  <select id="timeframe">
+    <option value="1分足">1分足</option>
+    <option value="5分足">5分足</option>
+    <option value="15分足">15分足</option>
+    <option>1時間足</option>
+    <option>4時間足</option>
+    <option>日足</option>
+  </select>
+</label>
+
+<label>エントリー価格
+  <input id="entryPrice" type="number" step="0.01">
+</label>
+
+<label>TP価格 <span id="tp-points"></span>
+  <input id="tpPrice" type="number" step="0.01">
+</label>
+
+<label>SL価格 <span id="sl-points"></span>
+  <input id="slPrice" type="number" step="0.01">
+</label>
+
+<label>Lot数
+  <input id="lot" type="number" step="0.01">
+</label>
+
+<label>結果
+  <select id="result">
+    <option>勝ち</option>
+    <option>負け</option>
+  </select>
+</label>
+
+<!-- 根拠 -->
+<h2>根拠</h2>
+<div id="reason-fields"></div>
+<button type="button" id="add-reason">＋根拠追加</button>
+
+<!-- 見解 -->
+<h2>見解・感想</h2>
+<textarea id="comment" rows="4"></textarea>
+
+<br><br>
+
+<button type="button" id="calculate">計算</button>
+<button type="button" id="generate-output">出力生成</button>
+
+<pre id="output"></pre>
+
+<!-- JavaScript 読み込み -->
+<script src="trade-log.js"></script>
+
+</body>
+</html>
